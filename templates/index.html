@@ -1,0 +1,16 @@
+{{ define "content" }}
+<section id="">
+    <h2>Available Bikes</h2>
+    <div class="bike-list">
+        {{ range .Bikes }}
+        <div class="bike-item">
+            <div class="bike-img">
+                <img src="/static/images/{{ .Image }}" alt="{{ .Name }}">
+            </div>
+            <h3>{{ .Name }}</h3>
+            <p>Price: ${{ .Price }}</p>
+        </div>
+        {{ end }}
+    </div>
+</section>
+{{ end }}
